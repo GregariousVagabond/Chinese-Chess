@@ -9,25 +9,19 @@ A Python based functional game for two players. Similar to chess, goal is to win
 Here's a simple example of how the to operate the game and use additonal features:
 ```
 game = XiangqiGame()
-game.make_move('e7', 'e6')
-game.make_move('c1', 'a3')
-game.make_move('e5', 'e6')
+game.make_move('a4', 'a5')
+game.make_move('a7', 'a6')
+game.make_move('a5', 'a6')
+game.make_move('a10', 'a6')
+game.make_move('h3', 'h10')
 
-move_result = game.make_move('c1', 'e3')
-black_in_check = game.is_in_check('black')
+state = black_in_check = game.is_in_check('black')
+print (state)
 state = game.get_game_state()
+print (state)
 ```
 
-Current state of the board will print after each move, and starting state of board is shown here:
-```
-['R', 'K', 'E', 'A', 'G', 'A', 'E', 'K', 'R']
-['', '', '', '', '', '', '', '', '']
-['', 'C', '', '', '', '', '', 'C', '']
-['P', '', ' P', '', 'P', '', 'P', '', 'P']
-['', '', '', '', '', '', '', '', '']
-['', '', '', '', '', '', '', '', '']
-['P', '', ' P', '', 'P', '', 'P', '', 'P']
-['', 'C', '', '', '', '', '', 'C', '']
-['', '', '', '', '', '', '', '', '']
-['R', 'K', 'E', 'A', 'G', 'A', 'E', 'K', 'R']
-```
+Current state of the board will print after each move. This screenshot shows the state of the board after the opening move of e4 to e5:
+
+![Screenshot of opening move](images/screenshot.png)
+
